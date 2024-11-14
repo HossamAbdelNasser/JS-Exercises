@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Home Page</title>
+  </head>
+  <body>
+    <h1>My Home Page</h1>
+
+    <p style="text-align: center">
+      <img
+        src="World Map.lnk"
+        style="position: relative"
+        width="500"
+        height="400"
+      />
+    </p>
+<script src="main.js">
+let image = document.querySelector("img");
+let angle = Math.PI / 2;
+function animate(time, lastTime) {
+  if (lastTime != null) {
+    angle += (time - lastTime) * 0.001;
+  }
+  image.style.top = Math.sin(angle) * 20 + "px";
+  image.style.left = Math.cos(angle) * 200 + "px";
+
+  requestAnimationFrame((newTime) => animate(newTime, time));
+}
+requestAnimationFrame(animate);
+  </script>
+  </body>
+</html>
