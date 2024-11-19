@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Net Balance</title>
+  </head>
+
+  <style>
+    .container {
+      width: 100%;
+      align-items: center;
+      display: flex;
+      flex-direction: column;
+    }
+
+    #balance-recharge {
+      display: flex;
+      flex-direction: column;
+      border: solid black 1px;
+      align-content: center;
+      text-align: center;
+      width: 25%;
+      padding: 10px;
+      margin: 10px;
+    }
+
+    h1 {
+      display: flex;
+      flex-direction: column;
+      align-content: center;
+      text-align: center;
+    }
+  </style>
+
+  <body>
+    <h1>Net Balance</h1>
+
+    <div class="container">
+    <div id="balance-recharge">
+      <p id="output-label"> <b>Paid: </b> </p>
+      <input id="input" type="number" />
+      <p>
+        <p id="output-label"> <b>Net Balance: </b> </p>
+        <input id="output" type="text" />
+      </p>
+    </div>
+  </div>
+
+    <script>
+const input = document.getElementById("input");
+const output = document.getElementById("output");
+
+input.addEventListener("change", (e) => {
+  output.value = e.target.value * 0.55;
+  console.log(output.textContent);
+});
+</script>
+
+  </body>
+</html>
