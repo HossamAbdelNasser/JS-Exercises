@@ -39,10 +39,10 @@
     <div class="container">
     <div id="balance-recharge">
       <p id="output-label"> <b>Paid: </b> </p>
-      <input id="input" type="number" />
+      <span><input id="input" type="number"/> EGP</span> 
       <p>
         <p id="output-label"> <b>Net Balance: </b> </p>
-        <input id="output" type="text" />
+        <span><input id="output" type="text" /> EGP</span> 
       </p>
     </div>
   </div>
